@@ -2,6 +2,7 @@ package info.androidhive.IRCTC;
 
 import info.androidhive.IRCTC.R;
 import info.androidhive.IRCTC.util.PrefManager;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +30,8 @@ public class SettingsActivity extends Activity {
 
 		// Display edittext values stored in shared preferences
 		// Google username
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		txtGoogleUsername.setText(pref.getGoogleUserName());
 
 		// Number of grid columns

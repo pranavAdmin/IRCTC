@@ -3,6 +3,8 @@ package info.androidhive.IRCTC;
 import info.androidhive.IRCTC.app.AppConst;
 import info.androidhive.IRCTC.app.AppController;
 import info.androidhive.IRCTC.picasa.model.Category;
+import info.androidhive.IRCTC.util.ConnectionDetector;
+import info.androidhive.IRCTC.util.AlertDialogManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,12 +26,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
+
+
 public class SplashActivity extends Activity {
 	private static final String TAG = SplashActivity.class.getSimpleName();
 	private static final String TAG_FEED = "feed", TAG_ENTRY = "entry",
 			TAG_GPHOTO_ID = "gphoto$id", TAG_T = "$t",
 			TAG_ALBUM_TITLE = "title";
-
+	ConnectionDetector cd;
+	AlertDialogManager alert = new AlertDialogManager();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,6 +42,15 @@ public class SplashActivity extends Activity {
 		getActionBar().hide();
 		setContentView(R.layout.activity_splash);
 
+		
+		cd = new ConnectionDetector(getApplicationContext());
+		
+		if (!cd.isConnectingToInternet()) {
+			// Internet Connection is not present
+			alert.showAlertDialog(SplashActivity.this,"Internet Connection Error","Please connect to working Internet connection", false);
+			// stop executing code by return
+			return;
+		}
 		// Picasa request to get list of albums
 		String url = AppConst.URL_PICASA_ALBUMS
 				.replace("_PICASA_USER_", AppController.getInstance()

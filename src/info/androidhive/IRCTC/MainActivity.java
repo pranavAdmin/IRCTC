@@ -129,8 +129,7 @@ public class MainActivity extends Activity {
 		case R.id.action_settings:
 			// Selected settings menu item
 			// launch Settings activity
-			Intent intent = new Intent(MainActivity.this,
-					SettingsActivity.class);
+			Intent intent = new Intent(MainActivity.this,SettingsActivity.class);
 			startActivity(intent);
 			return true;
 		default:

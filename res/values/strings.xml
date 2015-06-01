@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Awesome Wallpapers</string>
+    <string name="app_name">IRCTC</string>
     <string name="action_settings">Changes</string>
     <string name="nav_drawer_recently_added">Recently Added</string>
     <string name="toast_saved">Wallpapaer saved to #</string>
