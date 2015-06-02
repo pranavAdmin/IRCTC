@@ -41,5 +41,9 @@
             android:label="@string/action_settings"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="info.androidhive.IRCTC.login.loginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 </manifest>
