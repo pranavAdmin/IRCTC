@@ -1,10 +1,12 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
-import info.androidhive.IRCTC.app.AppConst;
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.picasa.model.Category;
-import info.androidhive.IRCTC.util.ConnectionDetector;
-import info.androidhive.IRCTC.util.AlertDialogManager;
+import info.android.IRCTC.app.AppConst;
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.login.loginActivity;
+import info.android.IRCTC.picasa.model.Category;
+import info.android.IRCTC.util.AlertDialogManager;
+import info.android.IRCTC.util.ConnectionDetector;
+import info.androidhive.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,6 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import info.androidhive.IRCTC.login.loginActivity;
 
 
 

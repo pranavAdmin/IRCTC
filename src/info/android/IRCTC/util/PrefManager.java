@@ -1,7 +1,7 @@
-package info.androidhive.IRCTC.util;
+package info.android.IRCTC.util;
 
-import info.androidhive.IRCTC.app.AppConst;
-import info.androidhive.IRCTC.picasa.model.Category;
+import info.android.IRCTC.app.AppConst;
+import info.android.IRCTC.picasa.model.Category;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
 public class NavDrawerItem {
 

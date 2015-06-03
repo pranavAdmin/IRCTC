@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC.util;
+package info.android.IRCTC.util;
 
 import android.app.AlertDialog;
 import android.content.Context;

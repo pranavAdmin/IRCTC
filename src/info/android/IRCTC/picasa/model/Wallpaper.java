@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC.picasa.model;
+package info.android.IRCTC.picasa.model;
 
 import java.io.Serializable;
 

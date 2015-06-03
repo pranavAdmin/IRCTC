@@ -1,7 +1,7 @@
-package info.androidhive.IRCTC.app;
+package info.android.IRCTC.app;
 
-import info.androidhive.IRCTC.util.LruBitmapCache;
-import info.androidhive.IRCTC.util.PrefManager;
+import info.android.IRCTC.util.LruBitmapCache;
+import info.android.IRCTC.util.PrefManager;
 import android.app.Application;
 import android.text.TextUtils;
 

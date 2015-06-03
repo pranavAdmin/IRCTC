@@ -1,8 +1,9 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.picasa.model.Wallpaper;
-import info.androidhive.IRCTC.util.Utils;
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.picasa.model.Wallpaper;
+import info.android.IRCTC.util.Utils;
+import info.androidhive.IRCTC.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

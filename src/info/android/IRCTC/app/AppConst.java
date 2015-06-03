@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC.app;
+package info.android.IRCTC.app;
 
 
 public class AppConst {
