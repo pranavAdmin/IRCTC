@@ -43,6 +43,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:ems="10" />
+        	
         <!-- Password Label -->
 
         <TextView
