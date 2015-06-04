@@ -105,8 +105,9 @@ public class SplashActivity extends Activity {
 									.storeCategories(albums);
 
 							// String the main activity
-							Intent intent = new Intent(getApplicationContext(),
-									MainActivity.class);
+							/*Intent intent = new Intent(getApplicationContext(),
+									MainActivity.class);*/
+							Intent intent=new Intent(getApplicationContext(),loginActivity.class);
 							startActivity(intent);
 							// closing spalsh activity
 							finish();

@@ -30,6 +30,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,6 +59,8 @@ public class loginActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	
 		super.onCreate(savedInstanceState);
+		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+		getActionBar().hide();
 		setContentView(R.layout.login);
 		inputEmail = (EditText) findViewById(R.id.loginEmail);
 		inputPassword = (EditText) findViewById(R.id.loginPassword);
