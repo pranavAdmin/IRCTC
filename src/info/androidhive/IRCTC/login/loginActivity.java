@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import info.androidhive.IRCTC.util.customRequest;
 
@@ -42,6 +43,7 @@ public class loginActivity extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	TextView loginErrorMsg;
+	ImageView logo;
 
 	// JSON Response node names
 	private static String KEY_SUCCESS = "success";
@@ -64,8 +66,10 @@ public class loginActivity extends Activity {
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
 		loginErrorMsg = (TextView) findViewById(R.id.login_error);
+		logo=(ImageView)findViewById(R.id.icon1);
 		
-
+		logo.animate();
+		
 		inputEmail.addTextChangedListener(new TextWatcher() {
 			
 			@Override

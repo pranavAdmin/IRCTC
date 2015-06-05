@@ -3,76 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/splash_screen"
+    android:background="@drawable/splash_screen_"
     android:orientation="vertical" >
-
-      <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:orientation="vertical" >
-
-        <!-- Email Label -->
-
-     <!--     <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dip"
-            android:text="LOGIN"
-            android:textColor="#fff"
-            android:textSize="25sp"
-            android:textStyle="bold" />-->
-
-        <!-- Email TextField -->
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="#fff"
-            android:layout_marginBottom="10dip"
-            android:layout_marginTop="22dip" />
-        <!-- Email Input -->
-
-        <EditText
-            android:id="@+id/loginEmail"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:ems="10" />
-        <!-- Password Label -->
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dip"
-            android:text="Password"
-            android:textColor="#fff" />
-
-        <!-- password input -->
-
-        <EditText
-            android:id="@+id/loginPassword"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/loginEmail"
-            android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:password="true" />
-        <!-- Error message -->
-
-        <TextView
-            android:id="@+id/login_error"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnLogin"
-            android:layout_alignParentLeft="true"
-            android:textColor="#ff0000"
-            android:textStyle="bold" />
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -106,6 +38,67 @@
         android:textStyle="bold"
         android:layout_marginBottom="22dip" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="22dip"
+            android:text="Name"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="Password"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/loginEmail"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:password="true" />
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnLogin"
+            android:layout_alignParentLeft="true"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerHorizontal="true" />
         
     </RelativeLayout>
 
