@@ -1,5 +1,5 @@
-package info.androidhive.IRCTC.util;
-import info.androidhive.IRCTC.app.AppController;
+package info.android.IRCTC.util;
+import info.android.IRCTC.app.AppController;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

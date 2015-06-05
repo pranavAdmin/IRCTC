@@ -1,11 +1,12 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
-import info.androidhive.IRCTC.app.AppConst;
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.helper.GridViewAdapter;
-import info.androidhive.IRCTC.picasa.model.Wallpaper;
-import info.androidhive.IRCTC.util.PrefManager;
-import info.androidhive.IRCTC.util.Utils;
+import info.android.IRCTC.app.AppConst;
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.helper.GridViewAdapter;
+import info.android.IRCTC.picasa.model.Wallpaper;
+import info.android.IRCTC.util.PrefManager;
+import info.android.IRCTC.util.Utils;
+import info.androidhive.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;

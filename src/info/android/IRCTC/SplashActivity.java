@@ -1,10 +1,12 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
-import info.androidhive.IRCTC.app.AppConst;
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.picasa.model.Category;
-import info.androidhive.IRCTC.util.ConnectionDetector;
-import info.androidhive.IRCTC.util.AlertDialogManager;
+import info.android.IRCTC.app.AppConst;
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.login.loginActivity;
+import info.android.IRCTC.picasa.model.Category;
+import info.android.IRCTC.util.AlertDialogManager;
+import info.android.IRCTC.util.ConnectionDetector;
+import info.androidhive.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,6 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import info.androidhive.IRCTC.login.loginActivity;
 
 
 
@@ -52,20 +52,20 @@ public class SplashActivity extends Activity {
 			// stop executing code by return
 			return;
 		}
-		else{
+		/*else{
 			Intent i=new Intent(getApplicationContext(),loginActivity.class);
 			startActivity(i);
 			finish();
-		}
+		}*/
 		// Picasa request to get list of albums
-/*		String url = AppConst.URL_PICASA_ALBUMS
+		String url = AppConst.URL_PICASA_ALBUMS
 				.replace("_PICASA_USER_", AppController.getInstance()
 						.getPrefManger().getGoogleUserName());
 		
 		Log.d(TAG, "Albums request url: " + url);
-*/
+
 		// Preparing volley's json object request
-/*		JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET, url,
+		JsonObjectRequest jsonObjReq = new JsonObjectRequest(Method.GET, url,
 				null, new Response.Listener<JSONObject>() {
 
 					@Override
@@ -105,8 +105,9 @@ public class SplashActivity extends Activity {
 									.storeCategories(albums);
 
 							// String the main activity
-							Intent intent = new Intent(getApplicationContext(),
-									MainActivity.class);
+							/*Intent intent = new Intent(getApplicationContext(),
+									MainActivity.class);*/
+							Intent intent=new Intent(getApplicationContext(),loginActivity.class);
 							startActivity(intent);
 							// closing spalsh activity
 							finish();
@@ -155,14 +156,14 @@ public class SplashActivity extends Activity {
 						}
 
 					}
-				});*/
+				});
 
 		// disable the cache for this request, so that it always fetches updated
 		// json
-/*		jsonObjReq.setShouldCache(false);
+		jsonObjReq.setShouldCache(false);
 
 		// Making the request
-		AppController.getInstance().addToRequestQueue(jsonObjReq);*/
+		AppController.getInstance().addToRequestQueue(jsonObjReq);
 
 	}
 

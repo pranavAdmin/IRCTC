@@ -62,10 +62,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+<<<<<<< HEAD
             android:ems="10" >
 
             <requestFocus />
         </EditText>
+=======
+            android:ems="10" />
+        	
+        <!-- Password Label -->
+>>>>>>> Listing_train
 
         <TextView
             android:layout_width="fill_parent"

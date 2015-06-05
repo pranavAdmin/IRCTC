@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC.util;
+package info.android.IRCTC.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

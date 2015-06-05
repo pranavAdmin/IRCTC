@@ -1,8 +1,9 @@
-package info.androidhive.IRCTC;
+package info.android.IRCTC;
 
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.helper.NavDrawerListAdapter;
-import info.androidhive.IRCTC.picasa.model.Category;
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.helper.NavDrawerListAdapter;
+import info.android.IRCTC.picasa.model.Category;
+import info.androidhive.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;

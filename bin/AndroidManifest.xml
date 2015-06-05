@@ -14,13 +14,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="info.androidhive.IRCTC.app.AppController"
+        android:name="info.android.IRCTC.app.AppController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/FreeWallTheme" >
         <activity
-            android:name="info.androidhive.IRCTC.SplashActivity"
+            android:name="info.android.IRCTC.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -29,20 +29,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="info.androidhive.IRCTC.MainActivity"
+            android:name="info.android.IRCTC.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="info.androidhive.IRCTC.FullScreenViewActivity"
+            android:name="info.android.IRCTC.FullScreenViewActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="info.androidhive.IRCTC.SettingsActivity"
+            android:name="info.android.IRCTC.SettingsActivity"
             android:label="@string/action_settings"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="info.androidhive.IRCTC.login.loginActivity"
+            android:name="info.android.IRCTC.login.loginActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

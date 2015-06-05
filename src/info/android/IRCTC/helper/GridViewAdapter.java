@@ -1,8 +1,8 @@
-package info.androidhive.IRCTC.helper;
+package info.android.IRCTC.helper;
 
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.picasa.model.Wallpaper;
 import info.androidhive.IRCTC.R;
-import info.androidhive.IRCTC.app.AppController;
-import info.androidhive.IRCTC.picasa.model.Wallpaper;
 
 import java.util.ArrayList;
 import java.util.List;

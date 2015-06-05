@@ -1,4 +1,4 @@
-package info.androidhive.IRCTC.login;
+package info.android.IRCTC.login;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -16,12 +16,13 @@ import com.android.volley.Request.Method;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.util.Railway;
+import info.android.IRCTC.util.customRequest;
 import info.androidhive.IRCTC.R;
-import info.androidhive.IRCTC.util.Railway;
 
 import java.util.Date;
 
-import info.androidhive.IRCTC.app.AppController;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,11 +30,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import info.androidhive.IRCTC.util.customRequest;
 
 
 public class loginActivity extends Activity {
@@ -60,6 +61,8 @@ public class loginActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	
 		super.onCreate(savedInstanceState);
+		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+		getActionBar().hide();
 		setContentView(R.layout.login);
 		inputEmail = (EditText) findViewById(R.id.loginEmail);
 		inputPassword = (EditText) findViewById(R.id.loginPassword);
