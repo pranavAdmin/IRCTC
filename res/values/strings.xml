@@ -20,5 +20,10 @@
     <string name="lbl_no_grid_columns">Number of grid columns</string>
     <string name="lbl_gallery_name">Gallery directory name</string>
     <string name="lbl_btn_save">Save</string>
+    <string name="lbl_btn_password">Password</string>
+    <string name="lbl_loginName">Login using your IRCTC Account</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="lbl_create_account">Create a new IRCTC account</string>
 
 </resources>
