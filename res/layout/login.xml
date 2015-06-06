@@ -3,67 +3,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/splash_screen"
+    android:background="@drawable/splash_screen_"
     android:orientation="vertical" >
-
-      <LinearLayout
+    <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="45dip"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:orientation="vertical" >
-
-        <!-- Email Label -->
-
-     <!--     <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dip"
-            android:text="LOGIN"
-            android:textColor="#fff"
-            android:textSize="25sp"
-            android:textStyle="bold" />-->
-
-        <!-- Email TextField -->
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp" >
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="#fff"
-            android:layout_marginBottom="10dip"
-            android:layout_marginTop="22dip" />
-        <!-- Email Input -->
+            android:layout_marginTop="22dip"
+            android:text="@string/lbl_loginName" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUserName"
+            android:textColor="#FF4CA6" />
 
         <EditText
             android:id="@+id/loginEmail"
+            android:inputType="textEmailAddress"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:ems="10" />
-        	
+            android:background="#EEEEEE" >
+
+            <requestFocus />
+        </EditText>
         <!-- Password Label -->
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dip"
-            android:text="Password"
-            android:textColor="#fff" />
-
-        <!-- password input -->
-
+            android:layout_marginTop="8dip"
+            android:textColor="#FF4CA6" />
         <EditText
             android:id="@+id/loginPassword"
+            android:inputType="textPassword"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_above="@+id/loginEmail"
             android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:password="true" />
-        <!-- Error message -->
+            android:ems="8"
+            android:password="true"
+            android:background="#EEEEEE" />
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip"
+            android:text="Remember me" />
 
         <TextView
             android:id="@+id/login_error"
@@ -73,41 +75,41 @@
             android:layout_alignParentLeft="true"
             android:textColor="#ff0000"
             android:textStyle="bold" />
-    </LinearLayout>
+	    <Button
+	        android:id="@+id/btnLogin"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/btnLinkToRegisterScreen"
+	        android:layout_alignParentLeft="true"
+	        android:background="#f04389"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:text="@string/btn_login" />
+	    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:layout_marginBottom="10dip"
+            android:text="@string/lbl_create_account"/>
+	    <!-- Link to Registration Screen -->
+	    <Button
+	        android:id="@+id/btnLinkToRegisterScreen"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/btnLinkToRegisterScreen"
+	        android:layout_alignParentLeft="true"
+	        android:background="#999999"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:text="@string/btn_register" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true" >
-
-          <!-- Login Button -->
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnLinkToRegisterScreen"
-        android:layout_alignParentLeft="true"
-        android:background="#f04389"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:text="Login" />
-
-    <!-- Link to Registration Screen -->
-
-    <Button
-        android:id="@+id/btnLinkToRegisterScreen"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@null"
-        android:text="I don&apos;t have account. Register Me!"
-        android:textColor="#21dbd4"
-        android:textStyle="bold"
-        android:layout_marginBottom="22dip" />
-
-        
-    </RelativeLayout>
-
+	    </LinearLayout>
+	    <ImageView
+	        android:id="@+id/icon1"
+	        android:layout_width="64dp"
+	        android:layout_height="64dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="25dp"
+	        android:src="@drawable/ic_launcher" />
 </RelativeLayout>

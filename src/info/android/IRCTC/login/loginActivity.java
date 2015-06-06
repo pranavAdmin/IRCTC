@@ -30,8 +30,10 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -42,6 +44,7 @@ public class loginActivity extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	TextView loginErrorMsg;
+	ImageView logo;
 
 	// JSON Response node names
 	private static String KEY_SUCCESS = "success";
@@ -58,14 +61,18 @@ public class loginActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	
 		super.onCreate(savedInstanceState);
+		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+		getActionBar().hide();
 		setContentView(R.layout.login);
 		inputEmail = (EditText) findViewById(R.id.loginEmail);
 		inputPassword = (EditText) findViewById(R.id.loginPassword);
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
 		loginErrorMsg = (TextView) findViewById(R.id.login_error);
+		logo=(ImageView)findViewById(R.id.icon1);
 		
-
+		logo.animate();
+		
 		inputEmail.addTextChangedListener(new TextWatcher() {
 			
 			@Override
