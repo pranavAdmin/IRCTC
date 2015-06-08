@@ -16,10 +16,11 @@ import com.android.volley.Request.Method;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import info.android.IRCTC.MainActivity;
 import info.android.IRCTC.app.AppController;
 import info.android.IRCTC.util.Railway;
 import info.android.IRCTC.util.customRequest;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.util.Date;
 
@@ -44,6 +45,8 @@ public class loginActivity extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	TextView loginErrorMsg;
+	TextView txtUsername;
+	TextView txtUserPasswrd;
 	ImageView logo;
 
 	// JSON Response node names
@@ -70,7 +73,8 @@ public class loginActivity extends Activity {
 		btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
 		loginErrorMsg = (TextView) findViewById(R.id.login_error);
 		logo=(ImageView)findViewById(R.id.icon1);
-		
+		txtUsername=(TextView)findViewById(R.id.txtUserName);
+		txtUserPasswrd=(TextView)findViewById(R.id.txtUserPasswrd);
 		logo.animate();
 		
 		inputEmail.addTextChangedListener(new TextWatcher() {
@@ -78,6 +82,29 @@ public class loginActivity extends Activity {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				loginErrorMsg.setText("");
+				txtUsername.setText("User Name");
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		txtUserPasswrd.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				txtUserPasswrd.setText("Password");
 				// TODO Auto-generated method stub
 				
 			}
@@ -116,13 +143,13 @@ public class loginActivity extends Activity {
 				
 				/*Railway class called*/
 				
-				Railway rs=new Railway();
+/*				Railway rs=new Railway();
 				Date dt=Calendar.getInstance().getTime();
 				//rs.getPNR("8457952224");
 				//rs.getStationCode("ahmedabad");
 				rs.getSeatavailable("16337", "adi", "thvm", dt, "GN");
 				//rs.getFare("12555", "gkp", "ndls", 25, dt);
-				
+*/				
 				/**/
 				/********* Custom code by pranav*/
 				//String url = some valid url;
@@ -160,9 +187,9 @@ public class loginActivity extends Activity {
 		try {
 			JSONArray feedArray = response.getJSONArray("record");
 			if(response.getString("success")=="1"){
-				/*Intent i=new Intent(getApplicationContext(),MainActivity.class);
+				Intent i=new Intent(getApplicationContext(),MainActivity.class);
 				startActivity(i);
-				finish();*/
+				finish();
 			}
 			else {
 				KEY_ERROR="You are not authorised\n";

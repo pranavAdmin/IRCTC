@@ -6,7 +6,7 @@ import info.android.IRCTC.helper.GridViewAdapter;
 import info.android.IRCTC.picasa.model.Wallpaper;
 import info.android.IRCTC.util.PrefManager;
 import info.android.IRCTC.util.Utils;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;

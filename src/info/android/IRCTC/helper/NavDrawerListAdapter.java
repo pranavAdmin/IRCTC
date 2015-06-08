@@ -1,7 +1,7 @@
 package info.android.IRCTC.helper;
 
 import info.android.IRCTC.NavDrawerItem;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.util.ArrayList;
 

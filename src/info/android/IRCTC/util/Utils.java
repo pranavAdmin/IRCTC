@@ -1,6 +1,6 @@
 package info.android.IRCTC.util;
 
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

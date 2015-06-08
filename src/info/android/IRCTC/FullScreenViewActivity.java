@@ -3,7 +3,7 @@ package info.android.IRCTC;
 import info.android.IRCTC.app.AppController;
 import info.android.IRCTC.picasa.model.Wallpaper;
 import info.android.IRCTC.util.Utils;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

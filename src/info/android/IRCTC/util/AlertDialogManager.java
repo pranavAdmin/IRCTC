@@ -4,7 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 public class AlertDialogManager {
 	/**

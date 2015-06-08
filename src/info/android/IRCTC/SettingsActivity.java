@@ -1,7 +1,7 @@
 package info.android.IRCTC;
 
 import info.android.IRCTC.util.PrefManager;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;

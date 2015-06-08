@@ -6,7 +6,7 @@ import info.android.IRCTC.login.loginActivity;
 import info.android.IRCTC.picasa.model.Category;
 import info.android.IRCTC.util.AlertDialogManager;
 import info.android.IRCTC.util.ConnectionDetector;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,7 +3,7 @@ package info.android.IRCTC;
 import info.android.IRCTC.app.AppController;
 import info.android.IRCTC.helper.NavDrawerListAdapter;
 import info.android.IRCTC.picasa.model.Category;
-import info.androidhive.IRCTC.R;
+import info.android.IRCTC.R;
 
 import java.util.ArrayList;
 import java.util.List;
