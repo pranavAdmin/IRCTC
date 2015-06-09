@@ -17,6 +17,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import info.android.IRCTC.MainActivity;
+import info.android.IRCTC.New_Booking;
 import info.android.IRCTC.app.AppController;
 import info.android.IRCTC.util.Railway;
 import info.android.IRCTC.util.customRequest;
@@ -187,7 +188,7 @@ public class loginActivity extends Activity {
 		try {
 			JSONArray feedArray = response.getJSONArray("record");
 			if(response.getString("success")=="1"){
-				Intent i=new Intent(getApplicationContext(),MainActivity.class);
+				Intent i=new Intent(getApplicationContext(),New_Booking.class);
 				startActivity(i);
 				finish();
 			}
