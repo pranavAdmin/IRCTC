@@ -76,8 +76,7 @@ public class loginActivity extends Activity {
 		logo=(ImageView)findViewById(R.id.icon1);
 		txtUsername=(TextView)findViewById(R.id.txtUserName);
 		txtUserPasswrd=(TextView)findViewById(R.id.txtUserPasswrd);
-		logo.animate();
-		
+	
 		inputEmail.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -184,6 +183,7 @@ public class loginActivity extends Activity {
 		});
 		
 	}
+
 	private void parseJsonFeed(JSONObject response) {
 		try {
 			JSONArray feedArray = response.getJSONArray("record");
