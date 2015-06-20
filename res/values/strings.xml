@@ -25,7 +25,7 @@
     <string name="btn_login">LOGIN</string>
     <string name="btn_register">REGISTER</string>
     <string name="lbl_create_account">Create a new IRCTC account</string>
-    <string name="title_activity_new__booking">New_Booking</string>
+    <string name="title_activity_new__booking">New Booking</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>
