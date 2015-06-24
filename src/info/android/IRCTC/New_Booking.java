@@ -7,8 +7,6 @@ import info.android.IRCTC.R;
 import info.android.IRCTC.helper.NavDrawerListAdapter;
 import info.android.IRCTC.picasa.model.Category;
 import info.android.IRCTC.NavDrawerItem;
-
-
 import info.android.IRCTC.app.AppController;
 import android.app.Activity;
 import android.app.Fragment;
@@ -30,6 +28,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class New_Booking extends Activity {
@@ -45,6 +44,13 @@ public class New_Booking extends Activity {
 	private List<Category> albumsList;
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
+	
+	
+	/*elements */
+	TextView lblFrom;
+	TextView txtStationName;
+	TextView txtStationCode;
+	/**/
 	  @Override
 	  protected void onCreate(Bundle savedInstanceState) {
 	      super.onCreate(savedInstanceState);
@@ -113,11 +119,11 @@ public class New_Booking extends Activity {
 			}
 		}
 
-		@Override
+	/*	@Override
 		public boolean onCreateOptionsMenu(Menu menu) {
 			getMenuInflater().inflate(R.menu.main, menu);
 			return true;
-		}
+		}*/
 
 		/**
 		 * On menu item selected
@@ -144,18 +150,27 @@ public class New_Booking extends Activity {
 		/* *
 		 * Called when invalidateOptionsMenu() is triggered
 		 */
-		@Override
+/*		@Override
 		public boolean onPrepareOptionsMenu(Menu menu) {
 			// if nav drawer is opened, hide the action items
 			boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
 			menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
 			return super.onPrepareOptionsMenu(menu);
-		}
+		}*/
 
 		/**
 		 * Diplaying fragment view for selected nav drawer list item
 		 * */
 		private void displayView(int position) {
+			
+			lblFrom=(TextView)findViewById(R.id.lblFrom);
+			txtStationName=(TextView)findViewById(R.id.txtStationName);
+			txtStationCode=(TextView)findViewById(R.id.txtStationCode);
+
+			lblFrom.setText("From");
+			txtStationCode.setText("Ahmedabad Jn");
+			txtStationName.setText("Adi");
+			/*
 			// update the main content by replacing fragments
 			Fragment fragment = null;
 			switch (position) {
@@ -187,7 +202,7 @@ public class New_Booking extends Activity {
 				// error in creating fragment
 				Log.e(TAG, "Error in creating fragment");
 			}
-		}
+		*/}
 
 		@Override
 		public void setTitle(CharSequence title) {

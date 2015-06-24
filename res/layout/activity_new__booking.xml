@@ -7,8 +7,8 @@
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="match_parent" >
+    </FrameLayout>
     <!-- Listview to display slider menu -->
     <ListView
         android:id="@+id/list_slidermenu"
@@ -20,17 +20,48 @@
         android:dividerHeight="1dp"        
         android:listSelector="@drawable/list_selector"
         android:background="@color/list_background"/>
-	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent">
-<ImageView
-  android:id="@+id/imageview"
-  android:layout_gravity="center"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
-  android:scaleType="center"
-  android:onClick="clockwise"
-  android:src="@drawable/images_64"/>
-</RelativeLayout>
+
+	<RelativeLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:orientation="vertical" >
+	    <TextView
+	        android:id="@+id/lblFrom"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/linearLayout1"
+	        android:layout_marginTop="35dp"
+	        android:layout_toLeftOf="@+id/linearLayout1" />
+   	    <TextView
+            android:id="@+id/txtStationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+	    <TextView
+	        android:id="@+id/txtStationName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    <ImageView
+	            android:id="@+id/imageview"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="center"
+	            android:onClick="clockwise"
+	            android:scaleType="center"
+	            android:src="@drawable/images_64" />
+	    </LinearLayout>
+
+
+
+	</RelativeLayout>
+
 </android.support.v4.widget.DrawerLayout>
