@@ -58,8 +58,16 @@
 	            android:onClick="clockwise"
 	            android:scaleType="center"
 	            android:src="@drawable/images_64" />
+	    <Spinner
+	        android:id="@+id/spinner1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/linearLayout1"
+	        android:layout_marginRight="54dp"
+	        android:layout_marginTop="92dp"
+	        android:layout_toLeftOf="@+id/linearLayout1" />
+	    
 	    </LinearLayout>
-
 
 
 	</RelativeLayout>

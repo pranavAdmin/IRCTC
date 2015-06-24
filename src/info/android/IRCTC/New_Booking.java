@@ -20,14 +20,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 /**/
 
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
@@ -50,6 +53,7 @@ public class New_Booking extends Activity {
 	TextView lblFrom;
 	TextView txtStationName;
 	TextView txtStationCode;
+	Spinner spinner;
 	/**/
 	  @Override
 	  protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +111,19 @@ public class New_Booking extends Activity {
 				// on first time display view for first nav item
 				displayView(0);
 			}
+			
+			/*Button Clicked Listener*/
+			txtStationCode.setOnClickListener(new OnClickListener() {
+				
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Intent i = new Intent(getApplicationContext(),Search_Station.class);
+					startActivity(i);
+					finish();
+					
+				}
+			});
+			
 	  }
 		/**
 		 * Navigation drawer menu item click listener
@@ -147,25 +164,13 @@ public class New_Booking extends Activity {
 			}
 		}
 
-		/* *
-		 * Called when invalidateOptionsMenu() is triggered
-		 */
-/*		@Override
-		public boolean onPrepareOptionsMenu(Menu menu) {
-			// if nav drawer is opened, hide the action items
-			boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-			menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
-			return super.onPrepareOptionsMenu(menu);
-		}*/
-
-		/**
-		 * Diplaying fragment view for selected nav drawer list item
-		 * */
 		private void displayView(int position) {
 			
 			lblFrom=(TextView)findViewById(R.id.lblFrom);
 			txtStationName=(TextView)findViewById(R.id.txtStationName);
 			txtStationCode=(TextView)findViewById(R.id.txtStationCode);
+			
+			
 
 			lblFrom.setText("From");
 			txtStationCode.setText("Ahmedabad Jn");

@@ -27,5 +27,13 @@
     <string name="lbl_create_account">Create a new IRCTC account</string>
     <string name="title_activity_new__booking">New Booking</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_train_list">TrainList</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_search__station">Search Station</string>
 
 </resources>
