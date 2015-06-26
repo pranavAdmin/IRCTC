@@ -166,5 +166,4 @@ public class SplashActivity extends Activity {
 		AppController.getInstance().addToRequestQueue(jsonObjReq);
 
 	}
-
 }

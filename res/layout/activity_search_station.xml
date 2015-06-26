@@ -9,14 +9,13 @@
     tools:context="info.android.IRCTC.Search_Station" >
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView1"
+        android:id="@+id/autoStationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:ems="10"
-        android:text="AutoCompleteTextView" >
+        android:ems="10">
 
         <requestFocus />
     </AutoCompleteTextView>

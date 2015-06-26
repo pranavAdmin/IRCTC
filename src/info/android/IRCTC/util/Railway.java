@@ -2,34 +2,15 @@ package info.android.IRCTC.util;
 import info.android.IRCTC.app.AppController;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Date;
-import java.util.Map;
 import java.sql.Timestamp;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.Request.Method;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.Request.Method;
 
-import android.content.Context;
+
 import android.util.Log;
 
 public class Railway {
@@ -83,8 +64,9 @@ public class Railway {
 		return customRequestCall(url);
 	}
 	public JSONObject getStationSuggest(String train){
-
+		Log.d("Passed Param", train);
 		url+=stationSuggest+train;
+		Log.d("Return Value", url);
 		return customRequestCall(url);
 	}
 /* STATION RELATED OVER */
@@ -122,8 +104,9 @@ public class Railway {
 	
 /* json volley custom request class call method*/
 	private JSONObject customRequestCall(String Url){
+		Log.d("final url", Url+apiKeyStr);
 		
-		customRequest jsObjRequest = new customRequest(Method.GET, url+apiKeyStr, null, new Response.Listener<JSONObject>() {
+		customRequest jsObjRequest = new customRequest(Method.GET, Url+apiKeyStr, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
             	Log.d("response", response.toString());

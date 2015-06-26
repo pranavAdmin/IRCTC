@@ -100,13 +100,14 @@ public class loginActivity extends Activity {
 				
 			}
 		});
-		txtUserPasswrd.addTextChangedListener(new TextWatcher() {
+		inputPassword.addTextChangedListener(new TextWatcher() {
 			
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				txtUserPasswrd.setText("Password");
 				// TODO Auto-generated method stub
-				
+				loginErrorMsg.setText("");
+				txtUsername.setText("");
+				txtUserPasswrd.setText("Password");
 			}
 			
 			@Override
@@ -141,16 +142,14 @@ public class loginActivity extends Activity {
 					inputPassword.setFocusable(true);
 				}
 				
-				/*Railway class called*/
-				
+/*				Railway class called		*/
 /*				Railway rs=new Railway();
 				Date dt=Calendar.getInstance().getTime();
-				//rs.getPNR("8457952224");
-				//rs.getStationCode("ahmedabad");
+//				rs.getPNR("8457952224");
+//				rs.getStationCode("ahmedabad");
 				rs.getSeatavailable("16337", "adi", "thvm", dt, "GN");
-				//rs.getFare("12555", "gkp", "ndls", 25, dt);
-*/				
-				/**/
+//				rs.getFare("12555", "gkp", "ndls", 25, dt);
+*//**/
 				/********* Custom code by pranav*/
 				//String url = some valid url;
 				Map<String, String> params = new HashMap<String, String>();

@@ -47,7 +47,7 @@
             android:id="@+id/txtUserPasswrd"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FF4CA6"/>
+            android:textColor="#FF4CA6" />
         <EditText
             android:id="@+id/loginPassword"
             android:inputType="textPassword"
