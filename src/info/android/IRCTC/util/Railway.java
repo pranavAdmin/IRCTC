@@ -1,15 +1,19 @@
 package info.android.IRCTC.util;
 import info.android.IRCTC.app.AppController;
+import info.android.IRCTC.helper.SuggestGetSet;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.sql.Timestamp;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.Request.Method;
-
 
 import android.util.Log;
 
@@ -64,9 +68,7 @@ public class Railway {
 		return customRequestCall(url);
 	}
 	public JSONObject getStationSuggest(String train){
-		Log.d("Passed Param", train);
 		url+=stationSuggest+train;
-		Log.d("Return Value", url);
 		return customRequestCall(url);
 	}
 /* STATION RELATED OVER */
@@ -104,12 +106,9 @@ public class Railway {
 	
 /* json volley custom request class call method*/
 	private JSONObject customRequestCall(String Url){
-		Log.d("final url", Url+apiKeyStr);
-		
 		customRequest jsObjRequest = new customRequest(Method.GET, Url+apiKeyStr, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-            	Log.d("response", response.toString());
             	jObj=response;
             }
         }, new Response.ErrorListener() {
@@ -120,4 +119,22 @@ public class Railway {
         AppController.getInstance().addToRequestQueue(jsObjRequest);
 		return jObj;
 	}
+/**************/
+	public List<SuggestGetSet> getJSONObj(JSONObject json){
+		List<SuggestGetSet> ListData = new ArrayList<SuggestGetSet>();
+		try {
+            JSONArray jsonArray = json.getJSONArray("station");
+            Log.d("array", jsonArray.toString());
+            for(int i = 0; i < jsonArray.length(); i++){
+                JSONObject r = jsonArray.getJSONObject(i);
+                ListData.add(new SuggestGetSet(r.getString("fullname"),r.getString("code")));
+            }
+        } catch (Exception e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+		return ListData;
+		
+	}
+	
 }
